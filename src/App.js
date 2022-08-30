@@ -18,7 +18,9 @@ function App() {
     try{
       // eslint-disable-next-line
      result = Function("return " + inputInfo)();
-     setInputInfo(result); 
+     if (result) {
+      setInputInfo(result); 
+     } 
     }
     catch(err) {
       window.alert('There is a problem with your writing format !');
